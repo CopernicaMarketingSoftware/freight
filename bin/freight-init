@@ -2,7 +2,7 @@
 
 # Initialize a Freight directory (similar to git init).
 
-#/ Usage: freight init -g<email> [--libdir=<libdir>] [--cachedir=<cachedir>] [--workdir=<workdir>] [--archs=<archs>] [--origin=<origin>] [--label=<label>] [-v] [-h] [<dirname>]
+#/ Usage: freight init -g<email> [--libdir=<libdir>] [--cachedir=<cachedir>] [--tempdir=<tempdir>] [--archs=<archs>] [--origin=<origin>] [--label=<label>] [-v] [-h] [<dirname>]
 #/   -g<email>, --gpg=<email> GPG key to use
 #/   -c<conf>, --conf=<conf>  config file to create (default etc/freight.conf)
 #/   --libdir=<libdir>        library directory (default var/lib/freight)
@@ -83,7 +83,7 @@ DIRNAME="$(cd "${1:-"."}" && pwd)"
 # follows the FHS style.
 VARLIB="${VARLIB:-"$DIRNAME/var/lib"}"
 VARCACHE="${VARCACHE:-"$DIRNAME/var/cache"}"
-WORKDIR="${TEMPDIR:-"$DIRNAME/var/cache"}"
+TEMPDIR="${TEMPDIR:-"$DIRNAME/var/cache"}"
 
 # Create the directory where `CONF` will be placed.  This is likely given
 # relative to `DIRNAME` so change to that directory to make things easy.
