@@ -82,6 +82,7 @@ LIB="$(cd "$(dirname "$(dirname "$0")")/lib/freight" && pwd)"
 mkdir -p "$VARCACHE"
 
 # Create a temporary working directory for extracting files
+mkdir -p "$TEMPDIR"
 TMP="$(mktemp -d "$TEMPDIR/work.$$.XXXXXXXXXX")"
 # shellcheck disable=SC2064
 trap "rm -rf \"$TMP\"" EXIT INT TERM
