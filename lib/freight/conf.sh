@@ -56,5 +56,6 @@ fi
 # Normalize directory names.
 VARLIB=${VARLIB%%/}
 VARCACHE=${VARCACHE%%/}
+TEMPDIR=${TEMPDIR%%/}
 
 # vim: et:ts=4:sw=4
