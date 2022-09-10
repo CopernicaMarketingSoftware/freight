@@ -5,6 +5,7 @@
 # web server's document root should be `$VARCACHE`.
 VARLIB="/var/lib/freight"
 VARCACHE="/var/cache/freight"
+TEMPDIR="/var/cache/freight"
 
 # Default architectures.
 # shellcheck disable=SC2034
